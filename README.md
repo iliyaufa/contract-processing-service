@@ -2,9 +2,9 @@
 
 ## Продуктовые требования
 
-Реализация обработки потока данных по схеме:
+##### Реализация обработки потока данных по схеме:
 
-![img.png](./img.png)
+![img.png](images/img.png)
 
 #### Требуется реализовать набор микро-сервисов: **ContractService**, **ContractProcessingService** и **ContractEventService**. 
 
@@ -22,7 +22,7 @@
 Структура таблицы contract описана в маппинге.
 
 **ContractEventService** слушает очередь **contract.event** в RabbitMQ. Полученные из очереди сообщения транслирует 
-в тело POST-запроса и отправляет по адресу `http:/host:port/status`.
+в тело **POST**-запроса и отправляет по адресу `http:/host:port/status`.
 
 ## Маппинги
 

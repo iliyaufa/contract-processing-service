@@ -4,7 +4,7 @@
 
 Реализация обработки потока данных по схеме:
 
-![img.png](/img.png)
+![img.png](./img.png)
 
 #### Требуется реализовать набор микро-сервисов: **ContractService**, **ContractProcessingService** и **ContractEventService**. 
 
@@ -29,7 +29,7 @@
 #### Маппинг **CreateNewContractRequest** во внутреннее представление **CreateNewContract**
 
 | **CreateNewContract** | **CreateNewContractRequest** | **Описание**         | 
-| :-------------------: | :--------------------------: | :------------------: |
+|         :---:         |            :---:             | :---                 |
 | `id`                  | `id`                         |                      |
 | `date_start`          | `DateStart`                  |                      |
 | `date_end`            | `DateEnd`                    |                      |
@@ -42,7 +42,7 @@
 #### Маппинг **ContractualParty** во внутреннее представление **ContractualParty**
 
 | **CreateNewContract.ContractualParty** | **CreateNewContractRequest .ContractualParty** |
-| :------------------------------------: | :--------------------------------------------: |
+|                :---:                   |                    :---:                       |
 | `name`                                 | `Name`                                         |
 | `bank_account_number`                  | `BankAccount`                                  |
 | `bik`                                  | `BankBik`                                      |
@@ -50,7 +50,7 @@
 #### Маппинг внутреннего представления **CreateNewContract** на таблицу БД **contract**
 
 | **contract**          | **CreateNewContract**        | **Описание колонок таблицы БД**  |
-| :-------------------: | :--------------------------: | :------------------------------: |
+|         :---:         |            :---:             | :---                             |
 | `id`                  | `id`                         | Первичный ключ таблицы. Тип колонки UUID|
 | `date_start`          | `date_start`                 | Дата без времени и временной зоны.|
 | `date_end`            | `date_end`                   | Дата без времени и временной зоны.|
@@ -64,7 +64,7 @@
 #### Маппинг созданной записи **contract** на статус **ContractStatus**
 
 | **ContractStatus**    | **contract**                 | **Описание**                  | 
-| :-------------------: | :--------------------------: | :---------------------------: |
+|         :---:         |            :---:             | :---                          |
 | `id`                  | `id`                         |                               |
 | `status`              |                              | Перечислимое значение **Created**, если сохранение прошло успешно и **Error**, если запись с таким 'id' или 'contract_number' уже существует.|
 | `date_create`         | `date_create`                | Заполняется, если сохранение выполнено.|

@@ -2,6 +2,7 @@ package com.example.contractprocessingservice.model;
 
 import com.example.contractprocessingservice.repository.ContractDao;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class ContractProcessingService {
@@ -11,7 +12,7 @@ public class ContractProcessingService {
     public ContractProcessingService(ContractDao contractDao) {
         this.contractDao = contractDao;
     }
-
+    @Transactional
     public ContractStatus contractHandle(ContractDto contractDto) {
         ContractStatus status = new ContractStatus();
         status.setId(contractDto.getId());

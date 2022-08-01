@@ -27,7 +27,7 @@
 ## Маппинги
 
 #### Маппинг **CreateNewContractRequest** во внутреннее представление **CreateNewContract**
-|                       |                              |                      | 
+
 | **CreateNewContract** | **CreateNewContractRequest** | **Описание**         | 
 | :-------------------: | :--------------------------: | :------------------: |
 | 'id'                  | 'id'                         |                      |
@@ -40,7 +40,7 @@
 | 'contractual_parties' | 'ContractualParties'         | Маппинг массива. Описание маппинга элемента массива ниже.|
 
 #### Маппинг **ContractualParty** во внутреннее представление **ContractualParty**
-|                                        |                                                |
+
 | **CreateNewContract.ContractualParty** | **CreateNewContractRequest .ContractualParty** |
 | :------------------------------------: | :--------------------------------------------: |
 | 'name'                                 | 'Name'                                         |
@@ -48,7 +48,7 @@
 | 'bik'                                  | 'BankBik'                                      |
 
 #### Маппинг внутреннего представления **CreateNewContract** на таблицу БД **contract**
-|                       |                              |                                  |
+
 | **contract**          | **CreateNewContract**        | **Описание колонок таблицы БД**  |
 | --------------------- | ---------------------------- | -------------------------------- |
 | 'id'                  | 'id'                         | Первичный ключ таблицы. Тип колонки UUID|
@@ -62,7 +62,7 @@
 | 'contractual_parties' | 'contractual_parties'        | Использовать тип jsonb для хранения json объекта. В данном случае будет сохраняться массив целиком.|
 
 #### Маппинг созданной записи **contract** на статус **ContractStatus**
-|                       |                              |                               |
+
 | **ContractStatus**    | **contract**                 | **Описание**                  | 
 | --------------------- | ---------------------------- | ----------------------------- |
 | 'id'                  | 'id'                         |                               |

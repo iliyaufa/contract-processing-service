@@ -1,0 +1,13 @@
+camel:
+  springboot:
+    main-run-controller: true
+spring:
+  main:
+    web-application-type: none
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/contractdb
+    username: sa
+    password: pgpwd4
+  jackson:
+    date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
